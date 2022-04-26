@@ -1,0 +1,69 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  margin: 60px 40px;
+  width: 100%;
+  max-width: 80vw;
+}
+
+.col {
+  float: left;
+  margin-right: 70px;
+}
+
+.box {
+  background-color: rgb(214, 231, 236);
+  height: 500px;
+  max-height: max-content;
+  padding: 10px 30px;
+  border-radius: 5px;
+  width: 30vw;
+}
+
+ul {
+  margin-left: -40px;
+}
+
+
+#posibles {
+  font-size: 12px;
+}
+
+#posibles li {
+  list-style: none;
+  margin-bottom: 5px;
+
+  width: 146px;
+  padding: 5px;
+}
+
+#lista {
+  color: darkgreen;
+  font-style: bold;
+}
+
+#lista li {
+  list-style: none;
+  line-height: 1.5rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.input {
+  width: 20%;
+}
+
+.mt-04 { margin-top: 0.4rem; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mt-4 { margin-top: 4rem; }
+.mt-5 { margin-top: 5rem; }
+.mr-5 { margin-right: 5rem; }
+.mr-6 { margin-right: 6rem; }
+
+.white { color: white; }
