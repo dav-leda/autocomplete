@@ -1,5 +1,5 @@
 
-import { arrayNombres } from './nombres.js'
+import { arrayNombres } from './arrayNombres.js'
 
 const select = document.querySelector.bind(document)
 const create = document.createElement.bind(document)
@@ -21,7 +21,7 @@ const mostrarPosibles = filtrado => {
     li.textContent = item;
     posibles.appendChild(li);
     li.onmouseover = () => {
-      li.style.background = 'lightgreen'
+      li.style.background = 'darkgreen'
       li.style.color = 'white'
     }
     li.onmouseleave = () => {
@@ -91,7 +91,7 @@ const filtrarNombres = (array, letras) => {
     const letrasMin = letras.toLowerCase()
     // Si el nombre empieza con las letras ingresadas
     // el callback retorna true, con lo cual ese nombre pasa el filtro
-    return nombreMin.substr(0, letrasMin.length) === l
+    return nombreMin.substr(0, letrasMin.length) === letrasMin
   })
   // Retorno la lista filtrada:
   return filtrado
