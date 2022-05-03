@@ -73,5 +73,7 @@ export const arrayNombres = [
   'Valeria',
   'Vicente',
   'Víctor',
-  'Victoria'
+  'Victoria',
+  'Yasmin',
+  'Yesica'
 ]
