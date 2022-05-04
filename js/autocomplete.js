@@ -14,6 +14,15 @@ const array = [...arrayNombres].sort();
 // Array vacío para guardar los nombres de los presentes:
 const presentes = [];
 
+
+// Evento que registra cada tecla pulsada
+nombre.addEventListener('keyup', (event) => {
+  // Cada vez que se oprime una letra
+  // esta funcion chequea si hay algun nombre
+  // que comience con esas letras:
+  chequearNombres(nombre.value, event)
+})
+
 const mostrarPosibles = filtrado => {
   filtrado.forEach( item => {
     let li = create('li');
@@ -96,15 +105,5 @@ const filtrarNombres = (array, letras) => {
   // Retorno la lista filtrada:
   return filtrado
 }
-
-nombre.addEventListener('keyup', (event) => {
-  // Cada vez que se oprime una letra
-  // esta funcion chequea si hay algun nombre
-  // que comience con esas letras:
-  chequearNombres(nombre.value, event)
-})
-
-
-
 
 
