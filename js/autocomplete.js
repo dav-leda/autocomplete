@@ -1,8 +1,11 @@
 
 import { arrayNombres } from './arrayNombres.js'
 
+// Selectores del DOM
 const select = document.querySelector.bind(document)
 const create = document.createElement.bind(document)
+
+// Elementos del DOM
 const nombreInput = select('#nombre')
 const lista = select('#lista')
 const posibles = select('#posibles')
@@ -25,7 +28,7 @@ nombre.addEventListener('keyup', (event) => {
 
 const mostrarPosibles = filtrado => {
   filtrado.forEach( item => {
-    let li = create('li');
+    const li = create('li');
     li.id = item;
     li.textContent = item;
     posibles.appendChild(li);
@@ -46,6 +49,7 @@ const mostrarPosibles = filtrado => {
 }
 
 const chequearNombres = (letras, event) => {
+  // Primero chequear si hay algo ingresado en el input:
   if (letras) {
     // 13 es el codigo de la tecla ENTER
     if (event.key == 'Enter' || event.keyCode == 13) {
@@ -56,6 +60,7 @@ const chequearNombres = (letras, event) => {
       mostrarPosibles(filtrado)
     } 
   } else {
+    // Si el input es vaciado, vaciar la lista
     posibles.innerHTML = ''
   }
 }
@@ -71,7 +76,7 @@ const agregarAlumno = nombre => {
     // Agrego el nombre al array de presentes:
     presentes.push(Nombre)
     // Borro el nombre del array inicial:
-    let index = array.indexOf(Nombre)
+    const index = array.indexOf(Nombre)
     array.splice(index, 1)
 
     // Muestro el nombre en la lista de alunnos:
@@ -86,7 +91,7 @@ const agregarAlumno = nombre => {
 }
 
 const mostrarAlumnos = nombre => {
-  let li = create('li')
+  const li = create('li')
   li.textContent = nombre + ' ✅'
   lista.appendChild(li)
   nombreInput.value = ''
